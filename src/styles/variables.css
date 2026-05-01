@@ -1,0 +1,22 @@
+:root {
+  /* Cores com fundo escuro e detalhes laranja */
+  --black: #0d0d0d;
+  --navy: #0f1419;
+  --navy-mid: #161d26;
+  --navy-light: #1c2632;
+  --steel: #6b7a8f;
+  --steel-light: #8c9bab;
+  --white: #e6eaef;
+  --white-pure: #ffffff;
+  --cyan: #00c8e8;
+  --orange: #ff6b35;
+  /* Cores da Logo K Interativo */
+  --orange-dark: #e5520a;
+  --orange-light: #ff8a4d;
+  --navy-logo: #0b1726;
+  --white-logo: #ffffff;
+  --gray-dark: #1a2535;
+  --card-bg: rgba(22, 29, 38, 0.95);
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+}
