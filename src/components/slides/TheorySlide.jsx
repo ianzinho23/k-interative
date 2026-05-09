@@ -81,11 +81,11 @@ function TheorySlide() {
               acabamento de peças de revolução (cilíndricas, cônicas ou radiais)
               através da remoção progressiva de material.
             </p>
-            <p style={{ marginTop: "10px" }}>
+            <p>
               Além do torneamento cilíndrico externo e interno, a máquina
               permite realizar operações como:
             </p>
-            <ul style={{ marginTop: "6px" }}>
+            <ul>
               <li>
                 <strong
                   style={{ color: "#F0F4F8", backgroundColor: "transparent" }}
@@ -151,7 +151,7 @@ function TheorySlide() {
               </strong>{" "}
               da ferramenta.
             </p>
-            <ul style={{ marginTop: "8px" }}>
+            <ul>
               <li>
                 <strong
                   style={{ color: "#F0F4F8", backgroundColor: "transparent" }}
@@ -198,11 +198,11 @@ function TheorySlide() {
               </svg>
               Componentes Principais
             </h3>
-            <p style={{ marginBottom: "10px", fontSize: "12.5px" }}>
+            <p className="components-desc">
               Para garantir precisão e força, o torno é composto por diversas
               partes integradas:
             </p>
-            <ul style={{ marginBottom: "12px", fontSize: "12.5px" }}>
+            <ul className="components-list">
               <li>
                 <strong
                   style={{ color: "#F0F4F8", backgroundColor: "transparent" }}
@@ -268,7 +268,7 @@ function TheorySlide() {
               </svg>
               O que ele faz na prática
             </h3>
-            <p style={{ marginBottom: "12px" }}>
+            <p className="practice-desc">
               Na manutenção industrial, o torno é a{" "}
               <strong
                 style={{ color: "#F0F4F8", backgroundColor: "transparent" }}
@@ -278,7 +278,7 @@ function TheorySlide() {
               . Ele recupera eixos desgastados, cria polias, buchas, pinos e
               parafusos especiais que não são encontrados comercialmente.
             </p>
-            <p style={{ marginBottom: "14px" }}>
+            <p className="practice-result">
               <strong
                 style={{ color: "#F0F4F8", backgroundColor: "transparent" }}
               >

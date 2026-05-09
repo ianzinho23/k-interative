@@ -652,6 +652,11 @@ video {
   font-size: 15px;
   color: rgba(242, 248, 255, 0.88);
   line-height: 1.75;
+  margin: 0;
+}
+
+.theory-card p + p {
+  margin-top: 10px;
 }
 
 .theory-card ul {
@@ -662,6 +667,27 @@ video {
   flex-direction: column;
   gap: 10px;
   min-width: 0;
+  font-size: 15px;
+  color: rgba(242, 248, 255, 0.92);
+  line-height: 1.8;
+}
+
+.theory-card ul + ul {
+  margin-top: 8px;
+}
+
+.theory-card ul:first-of-type {
+  margin-top: 6px;
+}
+
+.theory-card .components-desc {
+  margin-bottom: 10px;
+  font-size: 12.5px;
+}
+
+.theory-card .components-list {
+  margin-bottom: 12px;
+  font-size: 12.5px;
 }
 
 .theory-card ul li {
@@ -682,11 +708,28 @@ video {
   grid-column: 1 / -1;
 }
 
-.parts-grid {
+.theory-card .practice-desc {
+  margin-bottom: 12px;
+}
+
+.theory-card .practice-result {
+  margin-bottom: 14px;
+}
+
+.operations-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.operations-list li {
+  font-size: 15px;
+  color: rgba(242, 248, 255, 0.92);
+  line-height: 1.8;
+  padding-left: 0;
 }
 
 @media (max-width: 700px) {
