@@ -246,12 +246,12 @@ video {
 
 .btn-acessar {
   position: relative;
-  padding: 14px 48px;
+  padding: 16px 56px;
   background: transparent;
   border: 1.5px solid var(--orange);
   color: var(--orange);
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -298,8 +298,8 @@ video {
   background: rgba(255, 107, 53, 0.05);
   color: var(--orange);
   font-family: var(--font-display);
-  font-size: 12px;
-  padding: 10px 14px;
+  font-size: 13px;
+  padding: 12px 16px;
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.25s, color 0.25s;
@@ -1627,9 +1627,9 @@ video {
 
   .landing-links button {
     flex: 1 1 calc(25% - 5px);
-    min-width: 60px;
-    font-size: 9px;
-    padding: 6px 4px;
+    min-width: 65px;
+    font-size: 10px;
+    padding: 8px 6px;
   }
 
   .k-logo-ring {
