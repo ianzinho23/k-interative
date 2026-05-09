@@ -4,6 +4,17 @@
   padding: 0;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+li,
+span {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 html,
 body {
   width: 100%;
@@ -535,6 +546,8 @@ video {
   margin-bottom: 22px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0, 200, 232, 0.15);
+  min-width: 0;
+  max-width: 100%;
 }
 
 .theory-icon-box {
@@ -547,6 +560,11 @@ video {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.theory-header-text {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .theory-header-text h2 {
@@ -572,6 +590,7 @@ video {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 18px;
   min-width: 0;
+  max-width: 100%;
 }
 
 @media (max-width: 900px) {
@@ -583,6 +602,7 @@ video {
 .theory-card {
   background: rgba(9, 24, 42, 0.98);
   min-width: 0;
+  max-width: 100%;
   border: 1px solid rgba(0, 200, 232, 0.14);
   border-radius: 12px;
   padding: 20px 22px;
@@ -641,6 +661,7 @@ video {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: 0;
 }
 
 .theory-card ul li {
@@ -648,6 +669,7 @@ video {
   color: rgba(242, 248, 255, 0.92);
   padding-left: 0;
   line-height: 1.8;
+  overflow-wrap: break-word;
 }
 
 .theory-card ul li::before {
@@ -1401,6 +1423,8 @@ video {
 
   .theory-header-text h2 {
     font-size: 22px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 
   .theory-header-text p {
@@ -1520,12 +1544,14 @@ video {
   }
 
   .landing-links {
-    gap: 8px;
+    gap: 6px;
   }
 
   .landing-links button {
-    flex: 1 1 calc(50% - 8px);
-    min-width: 140px;
+    flex: 1 1 calc(25% - 6px);
+    min-width: 70px;
+    font-size: 10px;
+    padding: 8px 6px;
   }
 
   .k-logo-ring {
