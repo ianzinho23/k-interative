@@ -4,6 +4,16 @@
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 p,
 h1,
 h2,
@@ -1443,50 +1453,75 @@ video {
   }
 
   .slide {
-    padding: 16px 16px 20px;
+    padding: 12px 12px 16px;
   }
 
   /* Theory */
   .theory-header {
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
   }
 
   .theory-icon-box {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
   }
 
   .theory-icon-box svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 
   .theory-header-text h2 {
-    font-size: 22px;
+    font-size: 20px;
     word-break: break-word;
     overflow-wrap: anywhere;
   }
 
   .theory-header-text p {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .theory-image-wrap {
-    max-height: 220px;
+    max-height: 200px;
   }
 
   .theory-image {
     width: 100%;
     height: auto;
-    max-height: 220px;
+    max-height: 200px;
   }
 
   .theory-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 12px;
+  }
+
+  .theory-card {
+    padding: 16px 18px;
+  }
+
+  .theory-card h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .theory-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .theory-card ul {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .parts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 8px;
   }
 
   .theory-card {
@@ -1499,12 +1534,12 @@ video {
   }
 
   .theory-card p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.5;
   }
 
   .theory-card ul li {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .parts-grid {
@@ -1582,19 +1617,19 @@ video {
 
   .landing-center {
     width: 100%;
-    max-width: 420px;
-    padding: 0 16px 24px;
+    max-width: 380px;
+    padding: 0 12px 20px;
   }
 
   .landing-links {
-    gap: 6px;
+    gap: 5px;
   }
 
   .landing-links button {
-    flex: 1 1 calc(25% - 6px);
-    min-width: 70px;
-    font-size: 10px;
-    padding: 8px 6px;
+    flex: 1 1 calc(25% - 5px);
+    min-width: 60px;
+    font-size: 9px;
+    padding: 6px 4px;
   }
 
   .k-logo-ring {
