@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import TheorySlide from "./slides/TheorySlide";
 import VideoSlide from "./slides/VideoSlide";
+import TeamSlide from "./slides/TeamSlide";
 import SENAI_logo from "../img/SENAI_logo_2024.png";
 
 function Carousel({ initialSlide = 0 }) {
@@ -11,7 +12,7 @@ function Carousel({ initialSlide = 0 }) {
   const [startX, setStartX] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
   const trackRef = useRef(null);
-  const TOTAL_SLIDES = 2;
+  const TOTAL_SLIDES = 3;
 
   const goTo = (n) => {
     setCurrentSlide(Math.max(0, Math.min(TOTAL_SLIDES - 1, n)));
@@ -20,6 +21,7 @@ function Carousel({ initialSlide = 0 }) {
   const slides = [
     { id: 0, label: "Teoria", component: <TheorySlide /> },
     { id: 1, label: "Vídeo", component: <VideoSlide /> },
+    { id: 2, label: "Equipe", component: <TeamSlide /> },
   ];
 
   // Mouse events
@@ -86,7 +88,7 @@ function Carousel({ initialSlide = 0 }) {
           </div>
         </div>
         <button className="back-btn" onClick={() => navigate("/")}>
-          ← Voltar
+          ← Início
         </button>
       </div>
 

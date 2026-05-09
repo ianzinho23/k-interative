@@ -61,6 +61,37 @@ function VideoSlide() {
           cilíndrico completo.
         </p>
       </div>
+      <div className="video-summary">
+        <div className="summary-header">
+          <h2>K INTERATIVO</h2>
+          <p>Solução em Elétrica e Mecânica Industrial.</p>
+        </div>
+
+        <div className="summary-card">
+          <h3>Sobre o Projeto</h3>
+          <p>
+            Implementação de QR Codes nos maquinários do bloco K, informando
+            componentes e modo de funcionamento dos equipamentos.
+          </p>
+        </div>
+
+        <div className="summary-card">
+          <h3>Equipe & Docência</h3>
+          <ul>
+            <li>Luan Henrique</li>
+            <li>Eduardo Henrique</li>
+            <li>Bruno Oliveira</li>
+            <li>Michael Slater</li>
+          </ul>
+          <p>
+            Orientador: <strong>Prof. Maurício Gomes</strong>
+          </p>
+        </div>
+
+        <div className="summary-card summary-card-small">
+          <p>SENAI DENDEZEIROS · Ano: 2026</p>
+        </div>
+      </div>
     </div>
   );
 }

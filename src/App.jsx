@@ -1,13 +1,8 @@
-import { useState, useEffect } from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import Landing from "./components/Landing";
 import Carousel from "./components/Carousel";
+import AboutPage from "./components/AboutPage";
+import TeamPage from "./components/TeamPage";
 
 function App() {
   return (
@@ -16,6 +11,8 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/teoria" element={<CarouselPage initialSlide={0} />} />
         <Route path="/video" element={<CarouselPage initialSlide={1} />} />
+        <Route path="/sobre" element={<AboutPage />} />
+        <Route path="/equipe" element={<TeamPage />} />
       </Routes>
     </BrowserRouter>
   );
