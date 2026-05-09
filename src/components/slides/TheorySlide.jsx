@@ -288,13 +288,7 @@ function TheorySlide() {
               casa dos centésimos de milímetro) e excelente qualidade de
               superfície.
             </p>
-            <ul
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "6px",
-              }}
-            >
+            <ul className="operations-list">
               {operations.map((op, i) => (
                 <li key={i}>{op}</li>
               ))}

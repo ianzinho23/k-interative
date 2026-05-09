@@ -1401,6 +1401,7 @@ body {
   }
 
   .theory-grid {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
@@ -1432,6 +1433,40 @@ body {
     padding: 5px 8px;
   }
 
+  .operations-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .operations-list li {
+    margin: 0;
+  }
+
+  .theory-content {
+    gap: 18px;
+  }
+
+  .theory-image-wrap {
+    max-height: 240px;
+  }
+
+  .theory-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .parts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theory-card-full {
+    grid-column: auto;
+  }
+
   /* Video */
   .video-placeholder {
     min-height: 200px;
@@ -1459,6 +1494,69 @@ body {
   .video-meta-chip {
     font-size: 10px;
     padding: 4px 8px;
+  }
+
+  .landing-center {
+    width: 100%;
+    max-width: 420px;
+    padding: 0 16px 24px;
+  }
+
+  .landing-links {
+    gap: 8px;
+  }
+
+  .landing-links button {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 140px;
+  }
+
+  .k-logo-ring {
+    width: 90px;
+    height: 90px;
+  }
+
+  .landing-corner {
+    display: none;
+  }
+
+  .landing-title {
+    max-width: 320px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-logos {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .page-logo {
+    max-height: 36px;
+    padding: 6px;
+  }
+
+  .page-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .secondary-btn {
+    width: 100%;
+    max-width: 260px;
+    font-size: 12px;
+    padding: 10px 14px;
+  }
+
+  .video-summary {
+    padding: 14px;
+  }
+
+  .team-card-highlight .team-value {
+    font-size: 14px;
   }
 }
 

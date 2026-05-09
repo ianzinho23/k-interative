@@ -27,7 +27,7 @@ function Landing({ onAccess }) {
         </div>
 
         <button className="btn-acessar" onClick={onAccess}>
-          <span>⬡ &nbsp;Acessar Teoria</span>
+          <span>⬡ &nbsp;Acessar</span>
         </button>
 
         <div className="landing-links">
