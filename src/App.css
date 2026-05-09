@@ -8,8 +8,16 @@ html,
 body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   background: var(--navy);
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 #root {
@@ -465,6 +473,7 @@ body {
 
 .slide {
   flex: 0 0 100%;
+  min-width: 0;
   width: 100%;
   height: 100%;
   overflow-y: auto;
@@ -521,8 +530,9 @@ body {
 .theory-header {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0, 200, 232, 0.15);
 }
@@ -559,21 +569,23 @@ body {
 
 .theory-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+  min-width: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .theory-grid {
     grid-template-columns: 1fr;
   }
 }
 
 .theory-card {
-  background: var(--card-bg);
-  border: 1px solid rgba(0, 200, 232, 0.12);
-  border-radius: 4px;
-  padding: 16px 18px;
+  background: rgba(9, 24, 42, 0.98);
+  min-width: 0;
+  border: 1px solid rgba(0, 200, 232, 0.14);
+  border-radius: 12px;
+  padding: 20px 22px;
   position: relative;
   overflow: hidden;
   transition:
@@ -582,7 +594,7 @@ body {
 }
 
 .theory-card:hover {
-  border-color: rgba(0, 200, 232, 0.4);
+  border-color: rgba(0, 200, 232, 0.35);
   transform: translateY(-2px);
 }
 
@@ -602,12 +614,12 @@ body {
 
 .theory-card h3 {
   font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 800;
   color: var(--cyan);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -617,32 +629,29 @@ body {
   color: var(--orange);
 }
 .theory-card p {
-  font-size: 13.5px;
-  color: var(--steel-light);
-  line-height: 1.65;
+  font-size: 15px;
+  color: rgba(242, 248, 255, 0.88);
+  line-height: 1.75;
 }
 
 .theory-card ul {
-  list-style: none;
+  list-style: disc outside;
+  padding-left: 20px;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
 }
 
 .theory-card ul li {
-  font-size: 13px;
-  color: var(--steel-light);
-  padding-left: 16px;
-  position: relative;
-  line-height: 1.5;
+  font-size: 15px;
+  color: rgba(242, 248, 255, 0.92);
+  padding-left: 0;
+  line-height: 1.8;
 }
 
 .theory-card ul li::before {
-  content: "›";
-  position: absolute;
-  left: 0;
-  color: var(--cyan);
-  font-weight: 700;
+  content: "";
 }
 .theory-card.orange-accent ul li::before {
   color: var(--orange);
@@ -653,14 +662,20 @@ body {
 
 .parts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-top: 4px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  .parts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 500px) {
   .parts-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1393,11 +1408,13 @@ body {
   }
 
   .theory-image-wrap {
-    max-height: 200px;
+    max-height: 220px;
   }
 
   .theory-image {
-    max-height: 180px;
+    width: 100%;
+    height: auto;
+    max-height: 220px;
   }
 
   .theory-grid {
@@ -1562,15 +1579,18 @@ body {
 
 /* Theory with Image */
 .theory-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
   height: 100%;
   overflow-y: auto;
-  padding-right: 8px;
+  padding: 0 20px 16px 20px;
 }
 
 .theory-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 .theory-image-wrap {
