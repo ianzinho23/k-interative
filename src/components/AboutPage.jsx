@@ -38,6 +38,27 @@ function AboutPage() {
             informando componentes e modo de funcionamento dos equipamentos.
           </p>
         </div>
+        <div className="detail-card">
+          <h3>Equipe</h3>
+          <ul>
+            <li>Luan Henrique</li>
+            <li>Eduardo Henrique</li>
+            <li>Bruno Oliveira</li>
+            <li>Michael Slater</li>
+          </ul>
+        </div>
+
+        <div className="detail-card">
+          <h3>Docência</h3>
+          <div className="team-detail">
+            <span className="team-label">Orientador</span>
+            <span className="team-value">Prof. Maurício Gomes</span>
+          </div>
+          <div className="team-detail">
+            <span className="team-label">Instituição</span>
+            <span className="team-value">SENAI DENDEZEIROS · Ano: 2026</span>
+          </div>
+        </div>
       </div>
     </div>
   );

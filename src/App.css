@@ -595,6 +595,97 @@ video {
   margin-top: 4px;
 }
 
+.theory-image-wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 24px;
+}
+
+.theory-image {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 200, 232, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.video-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.video-player-wrap {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #050e1a;
+  border: 1px solid rgba(0, 200, 232, 0.12);
+}
+
+.video-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1080px;
+}
+
+.video-description {
+  width: 100%;
+  max-width: 1080px;
+  background: rgba(20, 32, 53, 0.85);
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  border-radius: 12px;
+  padding: 16px 18px;
+  color: #8A9BB0;
+  text-align: center;
+}
+
+.video-description p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.video-description-title {
+  color: #FF6B35;
+  font-weight: 600;
+  font-family: Barlow Condensed, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.video-player {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .image-thumbs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .image-thumbs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .theory-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -916,13 +1007,6 @@ video {
 }
 
 /* Video Slide */
-.video-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  height: 100%;
-}
-
 .video-placeholder {
   background: #050e1a;
   border: 1px solid rgba(0, 200, 232, 0.15);

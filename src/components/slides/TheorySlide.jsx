@@ -1,4 +1,4 @@
-import tornoImg from "../../img/torno.jpeg";
+import tornoImg from "../../img/torno.png";
 
 function TheorySlide() {
   const components = [
@@ -269,14 +269,11 @@ function TheorySlide() {
               O que ele faz na prática
             </h3>
             <p className="practice-desc">
-              Na manutenção industrial, o torno é a{" "}
-              <strong
-                style={{ color: "#F0F4F8", backgroundColor: "transparent" }}
-              >
-                mãe das máquinas
-              </strong>
-              . Ele recupera eixos desgastados, cria polias, buchas, pinos e
-              parafusos especiais que não são encontrados comercialmente.
+              O torno mecânico é uma das máquinas-ferramenta mais versáteis
+              e fundamentais da indústria. Na prática, ele é utilizado para
+              fabricar ou dar acabamento em peças cilíndricas, fazendo com
+              que a matéria-prima (metal, plástico ou madeira) gire em alta
+              velocidade contra uma ferramenta de corte que permanece fixa.
             </p>
             <p className="practice-result">
               <strong
