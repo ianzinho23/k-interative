@@ -1,20 +1,24 @@
-import tornoImg from "../../img/torno.png";
+import { useState } from "react";
+import tornoImg from "../../img/torno.jpeg";
 
 function TheorySlide() {
-  const components = [
-    "Barramento",
-    "Cabeçote Fixo",
-    "Cabeçote Móvel",
-    "Carro Principal (Longitudinal)",
-    "Carro Transversal",
-    "Carro Superior (Espera)",
-    "Caixa Norton (Engrenagens)",
-    "Placa de 3 Castanhas",
-    "Torre Porta-Ferramentas",
-    "Fuso / Vara",
-    "Avental",
-    "Motor Elétrico",
-  ];
+  const componentDetails = {
+    "Barramento": "Estrutura e Sustentação: A espinha dorsal do torno, servindo de guia alinhada para o movimento dos carros e do cabeçote móvel. (Acompanha Bandeja: Fica embaixo do barramento para recolher os resíduos/cavacos e o fluido de corte).",
+    "Cabeçote Fixo": "Tração e Fixação (Lado Esquerdo): Abriga o motor e as engrenagens que geram a potência e rotação.",
+    "Placa de 3 Castanhas": "Eixo-Árvore e Placa: O eixo transmite a rotação para a placa, que segura firmemente a peça a ser usinada.",
+    "Caixa Norton(Engrenagens)": "Caixa Norton: Conjunto de engrenagens que define a velocidade de avanço e o passo para fazer roscas.",
+    "Carro Principal (Longitudinal)": "Sistema de Corte e Movimentação: Anda paralelo ao barramento (esquerda/direita) para cortes longos. Seu movimento é auxiliado pelo Avental, que fica na frente do carro principal, onde ficam os volantes de controle manual e automático.",
+    "Avental": "Avental: Localizado na frente do carro principal, abriga os volantes, alavancas de controle manual e os mecanismos para o avanço automático.",
+    "Carro Transversal": "Carro Transversal: Move-se perpendicularmente ao barramento para dar profundidade ao corte ou facear a peça.",
+    "Carro Superior (Espera)": "Carro Superior (Charriot): Base giratória para fazer cortes em ângulos e cones.",
+    "Torre Porta-Ferramentas": "Torre de Ferramentas: Fica no topo dos carros para fixar firmemente as ferramentas de corte (bits/pastilhas).",
+    "Fuso / Vara": "Guias de Avanço: O Fuso é a barra roscada usada exclusivamente para abertura de roscas. A Vara é a barra lisa que puxa o avanço automático no torneamento comum.",
+    "Cabeçote Móvel": "Apoio e Guias: Fica na extremidade direita do barramento e serve para apoiar peças longas (evitando vibração) ou fixar mandris para furar o centro da peça.",
+    "Motor Elétrico": "Fonte de Potência: Responsável por gerar a força motriz que é transmitida para o cabeçote fixo e demais engrenagens do sistema.",
+  };
+
+  const components = Object.keys(componentDetails);
+  const [activeComponent, setActiveComponent] = useState(null);
 
   const operations = [
     "Torneamento cilíndrico externo e interno",
@@ -202,55 +206,30 @@ function TheorySlide() {
               Para garantir precisão e força, o torno é composto por diversas
               partes integradas:
             </p>
-            <ul className="components-list">
-              <li>
-                <strong
-                  style={{ color: "#F0F4F8", backgroundColor: "transparent" }}
-                >
-                  Barramento
-                </strong>
-                : Estrutura de sustentação da máquina, geralmente feita de ferro
-                fundido. Possue guias retificadas por onde deslizam o carro
-                principal e o cabeçote móvel, garantindo o alinhamento perfeito.
-              </li>
-              <li>
-                <strong
-                  style={{ color: "#F0F4F8", backgroundColor: "transparent" }}
-                >
-                  Cabeçote Fixo
-                </strong>
-                : Localizado à esquerda, abriga o motor, a árvore (eixo
-                principal) e as engrenagens de transmissão. É onde se monta a
-                Placa, que segura a peça e transmite o movimento de rotação.
-              </li>
-              <li>
-                <strong
-                  style={{ color: "#F0F4F8", backgroundColor: "transparent" }}
-                >
-                  Cabeçote Móvel
-                </strong>
-                : Desliza sobre o barramento e serve para apoiar peças longas
-                (usando um contraponto) ou para fixar mandris e brocas para
-                furação centralizada.
-              </li>
-              <li>
-                <strong
-                  style={{ color: "#F0F4F8", backgroundColor: "transparent" }}
-                >
-                  Caixa Norton
-                </strong>
-                : Sistema que permite selecionar a velocidade de rotação e a
-                taxa de avanço automático, essencial para a padronização do
-                acabamento e para a execução de roscas.
-              </li>
-            </ul>
             <div className="parts-grid">
-              {components.map((comp, i) => (
-                <div className="part-pill" key={i}>
+              {components.map((comp) => (
+                <button
+                  type="button"
+                  key={comp}
+                  className={`part-pill ${activeComponent === comp ? "active" : ""}`}
+                  onClick={() => setActiveComponent(comp)}
+                  aria-pressed={activeComponent === comp}
+                >
                   <div className="part-pill-dot"></div>
                   {comp}
-                </div>
+                </button>
               ))}
+            </div>
+            <div className="component-details-panel">
+              <h4>Detalhes do componente</h4>
+              <p
+                className={`component-detail-text ${activeComponent ? "visible" : ""}`}
+                aria-live="polite"
+              >
+                {activeComponent
+                  ? componentDetails[activeComponent]
+                  : "Clique em um componente para ver detalhes técnicos e funcionais."}
+              </p>
             </div>
           </div>
 

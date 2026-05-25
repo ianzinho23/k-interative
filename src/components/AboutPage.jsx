@@ -20,12 +20,6 @@ function AboutPage() {
       <div className="detail-content">
         <div className="page-logos">
           <img src={K_logo} alt="K Interativo" className="page-logo" />
-          <img src={SENAI_logo} alt="SENAI" className="page-logo" />
-        </div>
-        <div className="page-actions">
-          <button className="secondary-btn" onClick={() => navigate("/")}>
-            Voltar ao Início
-          </button>
         </div>
         <h2>K INTERATIVO</h2>
         <p className="detail-subtitle">
