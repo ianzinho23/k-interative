@@ -32,8 +32,6 @@ function Landing({ onAccess }) {
 
         <div className="landing-links">
           <button onClick={() => navigate("/sobre")}>Sobre o Projeto</button>
-          <button onClick={() => navigate("/teoria")}>Teoria</button>
-          <button onClick={() => navigate("/video")}>Vídeo</button>
         </div>
       </div>
 
